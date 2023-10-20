@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title> Membership Registration Form </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body> 
+        <div class="container">
+        <h2> Membership Registration Form </h2>
+        <form action="registerAPI.php" method="post">
+            <label for="username"> Username : </label>
+            <input type="text" id="username" name="username" required> <br> <br>
+
+            <label for="password"> Password : </label>
+            <input type="password" id="password" name="password" required> <br> <br>
+
+            <input type="submit" value="Register">
+
+
+            <script type="text/javascript">
+        // Check if an error message is present in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+
+        if (error) {
+            // Display the error message in an alert
+            alert(error);
+        }
+    </script>
+        
+            <p>Already have an account? <a href="login.html" class="login-button">Log in</a></p>
+            
+        </form>
+    </body>
+</html>
